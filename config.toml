@@ -23,35 +23,24 @@ theme = "academic"
   # For the header nav bar
   name = "Maja Kokot"
 
-  # For the "About Me" section
-  avatar = "img/profile.jpg"
-  bio = "I am a researcher at the University of Science. My interests include quantum computing, machine learning, and theoretical physics. This is where a short paragraph about your professional life would go."
-
-  olympiad_graphic = "img/olympiad-graphic.svg"
-
-  # For the header nav bar
+  # --- Main Navigation Links ---
   [[params.links]]
     name = "Home"
-    url = "/"
+    url = "/#about"
   [[params.links]]
-    name = "Publications"
-    url = "/publications/"
+    name = "Writing"
+    url = "/#writing"
+  [[params.links]]
+    name = "Notes"
+    url = "/#notes"
+  [[params.links]]
+    name = "Olympiad"
+    url = "/#olympiad"
+  [[params.links]]
+    name = "Projects"
+    url = "/#projects"
 
   # For the "About Me" section
-  [[params.social]]
-    name = "Email"
-    url = "mailto:test@example.com"
-  [[params.social]]
-    name = "GitHub"
-    url = "https://github.com"
-  [[params.social]]
-    name = "CV"
-    url = "cv.pdf"
+  avatar = "img/profile.jpg"
 
-    [[params.links]]
-  name = "Notes"
-  url = "#notes" # This links to the section on the homepage
-
-  [[params.links]]
-  name = "Olympiad"
-  url = "#olympiad"
+  olympiad_graphic = "img/olympiad-graphic.svg"

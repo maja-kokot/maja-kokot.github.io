@@ -4,6 +4,17 @@
   <div class="about-container">
     <div class="avatar">
       <img src="{{ .Params.avatar | relURL }}" alt="Avatar">
+
+      <h3 class="avatar-name">{{ .Params.name }}</h3>
+
+      <!-- Add the Contact Icon Links -->
+      <div class="personal-links">
+        {{ range .Params.contact_links }}
+          <a href="{{ .url }}">
+            <i class="{{ .icon }}"></i> {{ .name }}
+          </a>
+        {{ end }}
+      </div>
     </div>
 
     <div class="bio">
@@ -95,6 +106,15 @@
         <img src="{{ site.Params.olympiad_graphic | relURL }}" alt="Olympiad Graphic">
       </div>
   
+    </div>
+  {{ end }}
+</section>
+
+<section id="projects">
+  {{ with site.GetPage "/projects.md" }}
+    <h2>{{ .Title }}</h2>
+    <div class="projects-container">
+      {{ .Content }}
     </div>
   {{ end }}
 </section>
