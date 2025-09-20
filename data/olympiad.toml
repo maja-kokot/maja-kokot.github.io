@@ -1,0 +1,26 @@
+# data/olympiad.toml
+
+[[entry]]
+  title = "Classical Mechanics Problem Set"
+  url = "/olympiad/mechanics-problems.pdf"
+  description = """
+A collection of challenging problems for the IPhO.
+*   Covers Lagrangian and Hamiltonian mechanics.
+*   Includes problems on non-inertial frames.
+*   Detailed solutions are provided.
+  """
+  links = [
+    { name = "pdf", url = "/olympiad/mechanics-problems.pdf" }
+  ]
+
+[[entry]]
+  title = "Geometry in Electromagnetism"
+  url = "https://www.example-link.com/em-geometry"
+  description = """
+Notes on the geometric interpretation of Maxwell's equations.
+*   Focuses on differential forms.
+*   Connects to concepts in general relativity.
+  """
+  links = [
+    { name = "external link", url = "https://www.example-link.com/em-geometry" }
+  ]

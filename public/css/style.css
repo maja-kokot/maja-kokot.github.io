@@ -1,0 +1,276 @@
+/* --- Color Variables --- */
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --heading-color: #111;
+    --link-color: #337ab7;
+    --border-color: #eee;
+    --nav-link-color: #555;
+    --header-bg: #fff;
+    --header-border: #e5e5e5;
+}
+
+body.dark-mode {
+    --bg-color: #282a36;
+    --text-color: #ccc;
+    --heading-color: #eee;
+    --link-color: #8ab4f8;
+    --border-color: #333;
+    --nav-link-color: #aaa;
+    --header-bg: #252525;
+    --header-border: #333;
+}
+
+/* --- Basic Body and Container Styles --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.2s, color 0.2s;
+    padding-top: 4rem; 
+}
+.container {
+    max-width: 1024px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+/* --- Top Navigation Header --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
+    padding: -0.8rem 0;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.nav-brand {
+    font-family: "Georgia", serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--heading-color);
+}
+.nav-link {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: var(--nav-link-color);
+}
+.nav-link:hover {
+    color: var(--heading-color);
+}
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--nav-link-color);
+    padding-left: 1.5rem;
+}
+#theme-toggle:hover {
+    color: var(--heading-color);
+}
+
+/* --- About Me Section --- */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.avatar {
+    flex: 0 0 150px;
+}
+.avatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+.bio {
+    flex: 1;
+}
+.bio p {
+    margin-top: 0;
+}
+.social-links a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: var(--link-color);
+}
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- Generic Section Header Styles --- */
+/* Groups all main section titles for consistent styling */
+#about h2, #notes h2, #olympiad h2, #writing h2, #education h2 {
+    font-family: "Georgia", serif;
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* --- Shared Content Styles (Notes, Olympiad, Writing) --- */
+/* Applies to the content rendered from your markdown files */
+.notes-content,
+.olympiad-content,
+.writing-content {
+    line-height: 1.6; /* Ensure consistent line spacing */
+}
+
+/* Subheadings (h3) within content sections */
+.notes-content h3,
+.olympiad-content h3,
+.writing-content h3 {
+    font-family: "Georgia", serif;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+}
+
+/* Unordered lists (ul) */
+.notes-content ul,
+.olympiad-content ul,
+.writing-content ul {
+    list-style-type: circle;
+    padding-left: 20px;
+    columns: 1; /* Ensures single column layout */
+}
+
+/* List items (li) */
+.notes-content li,
+.olympiad-content li,
+.writing-content li {
+    margin-bottom: 0.75rem;
+    break-inside: avoid;
+}
+
+/* Links (a) */
+.notes-content a,
+.olympiad-content a,
+.writing-content a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+.notes-content a:hover,
+.olympiad-content a:hover,
+.writing-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- Olympiad Section Specifics --- */
+/* These rules control the unique two-column layout with the graphic */
+.olympiad-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.olympiad-content {
+    flex: 2;
+    min-width: 300px;
+}
+.olympiad-graphic {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.olympiad-graphic img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* --- Blog & Post Styles --- */
+.blog-list {
+    list-style: none;
+    padding: 0;
+}
+.blog-list li {
+    margin-bottom: 2rem;
+}
+.blog-list a {
+    font-size: 1.5rem;
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+.post {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.post header {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+.post h1 {
+    font-family: "Georgia", serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--heading-color);
+}
+.post-meta {
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+.post-content {
+    font-size: 1.1rem;
+}
+.post-content pre {
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 5px;
+}
+
+/* --- Education Section --- */
+#education {
+    margin-top: 2.5rem;
+}
+.education-list {
+    list-style: none;
+    padding: 0;
+}
+.education-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+.education-list li i {
+    margin-top: 0.25rem;
+    margin-right: 1rem;
+    color: var(--nav-link-color);
+    width: 1.2em;
+}
+.course-details {
+    flex: 1;
+}
+.course-title {
+    font-weight: bold;
+}
+.course-institution {
+    font-style: italic;
+    color: var(--nav-link-color);
+}

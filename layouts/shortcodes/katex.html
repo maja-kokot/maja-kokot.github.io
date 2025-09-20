@@ -1,0 +1,9 @@
+{{- if .IsNamedParams -}}
+    {{- if eq (.Get "display") "true" -}}
+        $$ {{- .Inner -}} $$
+    {{- else -}}
+        $ {{- .Inner -}} $
+    {{- end -}}
+{{- else -}}
+    $ {{- .Inner -}} $
+{{- end -}}

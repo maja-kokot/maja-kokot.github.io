@@ -1,0 +1,57 @@
+baseURL = "/"
+title = "Maja Kokot"
+theme = "academic"
+
+[markup]
+  [markup.goldmark.renderer]
+    # This allows KaTeX to work by letting it use raw HTML
+    unsafe = true
+  [markup.highlight]
+    # This enables code syntax highlighting
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    # Pick a style here: https://xyproto.github.io/splash/docs/all.html
+    style = "dracula"
+    tabWidth = 4
+
+[params]
+  # For the header nav bar
+  name = "Maja Kokot"
+
+  # For the "About Me" section
+  avatar = "img/profile.jpg"
+  bio = "I am a researcher at the University of Science. My interests include quantum computing, machine learning, and theoretical physics. This is where a short paragraph about your professional life would go."
+
+  olympiad_graphic = "img/olympiad-graphic.svg"
+
+  # For the header nav bar
+  [[params.links]]
+    name = "Home"
+    url = "/"
+  [[params.links]]
+    name = "Publications"
+    url = "/publications/"
+
+  # For the "About Me" section
+  [[params.social]]
+    name = "Email"
+    url = "mailto:test@example.com"
+  [[params.social]]
+    name = "GitHub"
+    url = "https://github.com"
+  [[params.social]]
+    name = "CV"
+    url = "cv.pdf"
+
+    [[params.links]]
+  name = "Notes"
+  url = "#notes" # This links to the section on the homepage
+
+  [[params.links]]
+  name = "Olympiad"
+  url = "#olympiad"

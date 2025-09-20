@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Maja Kokot</title>
+    <link>//localhost:1313/blog/</link>
+    <description>Recent content in Blogs on Maja Kokot</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 05 Sep 2025 19:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>//localhost:1313/blog/my-first-post/</link>
+      <pubDate>Fri, 05 Sep 2025 19:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/my-first-post/</guid>
+      <description>&lt;p&gt;This is my first post! It&amp;rsquo;s written in Markdown. Here&amp;rsquo;s an example of an image:&lt;/p&gt;&#xA;&lt;h2 id=&#34;code-blocks&#34;&gt;Code Blocks&lt;/h2&gt;&#xA;&lt;p&gt;Here is a Python code block with syntax highlighting, thanks to the &lt;code&gt;dracula&lt;/code&gt; theme we set in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;hello_world&lt;/span&gt;():&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#6272a4&#34;&gt;# This is a comment&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    message &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Hello, Hugo!&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;print&lt;/span&gt;(message)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hello_world()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-language&#34; data-lang=&#34;language&#34;&gt;your code goes here&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;$$ I = \begin{pmatrix} 1 &amp;amp; 0 \ 0 &amp;amp; 1 \end{pmatrix} $$&lt;/p&gt;&#xA;&lt;p&gt;This text includes an equation, like $ a^2 + b^2 = c^2 $, right in the middle of the line.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

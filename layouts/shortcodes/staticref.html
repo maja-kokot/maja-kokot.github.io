@@ -1,0 +1,9 @@
+{{/*
+    Our custom 'staticref' shortcode.
+    Usage: {{< staticref "path/to/file.pdf" "newtab" >}}Link Text{{< /staticref >}}
+    
+    .Get 0 -> The first parameter (the file path)
+    .Get 1 -> The second parameter (the "newtab" option)
+    .Inner  -> The text between the opening and closing tags (the Link Text)
+*/}}
+<a href="{{ .Get 0 | relURL }}"{{ if eq (.Get 1) "newtab" }} target="_blank" rel="noopener"{{ end }}>{{ .Inner }}</a>

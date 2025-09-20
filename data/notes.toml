@@ -1,0 +1,21 @@
+# This is an array. To add a new note, just copy and paste
+# a new [[entry]] block.
+
+[[entry]]
+  title = "An Introduction to Quantum Mechanics"
+  # The main link for the title. Can be internal or external.
+  url = "https://www.example.com/quantum-intro"
+  description = "Introductory notes for the PHYS 101 course, covering wave-particle duality and the Schrödinger equation."
+  # You can have multiple extra links.
+  links = [
+    { name = "pdf", url = "/notes/quantum-mechanics.pdf" }
+  ]
+
+[[entry]]
+  title = "General Relativity Field Notes"
+  url = "https://arxiv.org/abs/1234.5678"
+  description = "A summary of key concepts in general relativity, based on a graduate-level course."
+  links = [
+    { name = "pdf", url = "/notes/general-relativity.pdf" },
+    { name = "arXiv", url = "https://arxiv.org/abs/1234.5678" }
+  ]
