@@ -1,122 +1,84 @@
 {{ define "main" }}
-<!-- About Me Section -->
-<section id="about">
-  <div class="about-container">
-    <div class="avatar">
-      <img src="{{ .Params.avatar | relURL }}" alt="Avatar">
-
-      <h3 class="avatar-name">{{ .Params.name }}</h3>
-
-      <!-- Add the Contact Icon Links -->
-      <div class="personal-links">
-        {{ range .Params.contact_links }}
-          <a href="{{ .url }}">
-            <i class="{{ .icon }}"></i> {{ .name }}
-          </a>
-        {{ end }}
-      </div>
-    </div>
-
-    <div class="bio">
-      <!-- 1. ADDED THE "ABOUT ME" TITLE -->
-      <h2>About Me</h2>
-
-      <!-- The main biography content from _index.md -->
-      {{ .Content }}
-
-      <!-- The social links from _index.md -->
-      <div class="social-links">
-        {{ range .Params.social }}
-          <a href="{{ .url }}">{{ .name }}</a>
-        {{ end }}
-      </div>
-
-      <!-- 2. MOVED THE EDUCATION SECTION INSIDE THE BIO DIV -->
-      {{ with .Params.education }}
-      <div id="education"> <!-- Changed from <section> to <div> -->
-        <h2>Education</h2>
-        <ul class="education-list">
-          {{ range .courses }}
-          <li>
-            <!-- 3. MOVED THE ICON INSIDE THE LOOP -->
-            <i class="fas fa-graduation-cap"></i>
-            <div class="course-details">
-              <div class="course-title">{{ .course }}</div>
-              <div class="course-institution">{{ .institution }}, {{ .year }}</div>
+    <!-- The Re-unified "About Me" Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <!-- Left Column: Avatar, Name, Links -->
+            <div class="about-avatar">
+                <img src="{{ .Params.avatar | relURL }}" alt="Avatar" class="avatar-image">
+                <h1 class="avatar-name">{{ .Params.name }}</h1>
+                <div class="personal-links">
+                    {{ range .Params.contact_links }}
+                    <a href="{{ .url }}">
+                        <i class="{{ .icon }}"></i> {{ .name }}
+                    </a>
+                    {{ end }}
+                </div>
+                <div class="social-links">
+                     {{ range .Params.social }}
+                     <a href="{{ .url }}" title="{{ .name }}" target="_blank">
+                         <i class="fab fa-{{ lower .name }}"></i>
+                     </a>
+                     {{ end }}
+                </div>
             </div>
-          </li>
-          {{ end }}
-        </ul>
-      </div>
-      {{ end }}
-    </div>
-  </div>
-</section>
+            <!-- Right Column: Bio and Education -->
+            <div class="about-bio">
+                <h2>About Me</h2>
+                {{ .Content }}
+                {{ with .Params.education }}
+                <div id="education"> 
+                    <h3>Education</h3>
+                    <ul class="education-list">
+                        {{ range .courses }}
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <div class="course-details">
+                                <div class="course-title">{{ .course }}</div>
+                                <div class="course-institution">{{ .institution }}, {{ .year }}</div>
+                            </div>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
 
-<section id="writing">
-  {{ with site.GetPage "/writing.md" }}
-    <h2>{{ .Title }}</h2>
-    <div class="writing-content">
-      {{ .Content }}
-    </div>
-  {{ end }}
-</section>
+    <section id="interactive-graph-container">
+        <!-- <h2 class="graph-intro-title">Academic graph</h2> -->
+    <p class="graph-intro-text">This is a physics-based visualization of my academic interests. Click on a node to learn more, or drag them around to explore the connections.</p>
 
-<section id="notes">
-  {{ with site.GetPage "/notes.md" }}
-    <h2>{{ .Title }}</h2>
-    <div class="notes-content">
-      {{ .Content }}
-    </div>
-  {{ end }}
-</section>
+        <!-- The p5.js canvas will be created inside this div -->
+        <div id="canvas-holder"></div>
+    </section>
 
-<!--
-<section id="notes">
-  <h2>Lecture Notes</h2>
-  <ul class="notes-list">
-     Loop through each entry in data/notes.toml 
-    {{ range site.Data.notes.entry }}
-    <li>
-      <div class="note-title">
-        <a href="{{ .url }}">{{ .title }}</a>
-         Loop through the extra links like [pdf] 
-        {{ range .links }}
-          <a class="note-link" href="{{ .url }}">[{{ .name }}]</a>
-        {{ end }}
-      </div>
-      <p class="note-description">{{ .description }}</p>
-    </li>
+    <!-- The rest of the sections follow as before -->
+    {{ with .Site.GetPage "/writing.md" }}
+    <section id="writing" class="fade-in-section">
+        <h2>{{ .Title }}</h2>
+        <div class="content-container">{{ .Content }}</div>
+    </section>
     {{ end }}
-  </ul>
-</section>-->
 
-<section id="olympiad">
-  {{ with site.GetPage "/olympiad.md" }}
-    <h2>{{ .Title }}</h2>
-    <div class="olympiad-container">
-      
-      <!-- Column 1: The Content from your new markdown file -->
-      <div class="olympiad-content">
-        {{ .Content }}
-      </div>
-  
-      <!-- Column 2: The Graphic (This remains unchanged) -->
-      <div class="olympiad-graphic">
-        <img src="{{ site.Params.olympiad_graphic | relURL }}" alt="Olympiad Graphic">
-      </div>
-  
-    </div>
-  {{ end }}
-</section>
+    {{ with .Site.GetPage "/notes.md" }}
+    <section id="notes" class="fade-in-section">
+        <h2>{{ .Title }}</h2>
+        <div class="content-container">{{ .Content }}</div>
+    </section>
+    {{ end }}
 
-<section id="projects">
-  {{ with site.GetPage "/projects.md" }}
-    <h2>{{ .Title }}</h2>
-    <div class="projects-container">
-      {{ .Content }}
-    </div>
-  {{ end }}
-</section>
+    {{ with .Site.GetPage "/olympiad.md" }}
+    <section id="olympiad" class="fade-in-section">
+        <h2>{{ .Title }}</h2>
+        <div class="content-container">{{ .Content }}</div>
+    </section>
+    {{ end }}
 
+    {{ with .Site.GetPage "/projects.md" }}
+    <section id="projects" class="fade-in-section">
+        <h2>{{ .Title }}</h2>
+        <div class="content-container">{{ .Content }}</div>
+    </section>
+    {{ end }}
 {{ end }}

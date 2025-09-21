@@ -1,0 +1,298 @@
+/* main.css */
+/* --- HTML Root Styles --- */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem; /* Increased padding for the taller fixed header */
+}
+
+/* --- Color Palette (Kept from previous design) --- */
+:root {
+    --bg-main: #1e1e1e;
+    --bg-content: #252525;
+    --border-color: #3a3a3a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --text-headings: #ffffff;
+    --link-color: #9d8eee;
+    --link-hover-color: #b8aeff;
+}
+
+/* --- Basic Body and Typography --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-size: 16px;
+    padding-top: 5rem; /* Space for the fixed header */
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+h1, h2, h3 { color: var(--text-headings); font-family: "Georgia", serif; }
+h2 { font-size: 2rem; margin-top: 2rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color); }
+h3 { font-size: 1.5rem; margin-top: 2rem; }
+a { color: var(--link-color); text-decoration: none; transition: color 0.2s ease; }
+a:hover { color: var(--link-hover-color); }
+
+/* --- Fixed Top Header --- */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(30, 30, 30, 0.85); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+}
+.site-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-brand { font-size: 1.5rem; font-weight: bold; font-family: "Georgia", serif; color: var(--text-headings); }
+.nav-links a { color: var(--text-secondary); margin-left: 1.5rem; font-weight: 500; }
+.nav-links a:hover { color: var(--text-headings); }
+#theme-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-secondary); margin-left: 1rem; }
+
+/* --- "About Me" Section Layout --- */
+.about-section { margin-top: 3rem; }
+.about-container { 
+    display: flex; 
+    gap: 5rem; 
+    align-items: flex-start; 
+}
+.about-avatar { flex: 0 0 240px; text-align: center; }
+.avatar-image { width: 100%; border-radius: 50%; border: 2px solid var(--border-color); }
+.avatar-name { font-size: 2rem; margin: 1rem 0 0.5rem; }
+.personal-links { 
+    display: flex; 
+    flex-direction: row; /* Change to row for side-by-side layout */
+    justify-content: center; /* Center the icons horizontally */
+    gap: 1.5rem; /* Add more space between them */
+    margin: 1rem 0; 
+}
+.personal-links a { font-size: 1.1rem; }
+.personal-links i { margin-right: 0.75rem; width: 20px; text-align: center; }
+.social-links { margin-top: 1.5rem; }
+.social-links a { margin: 0 0.75rem; font-size: 1.5rem; color: var(--text-secondary); }
+.about-bio { flex: 1; }
+
+/* --- Other Content Sections --- */
+section { padding-top: 1rem; }
+.content-container ul { list-style-type: circle; padding-left: 20px; }
+
+/* Projects Section Styling (Kept from previous design) */
+.project-box { background-color: var(--bg-content); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
+.project-box:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+.project-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1rem; }
+.project-title { font-size: 1.3rem; margin: 0; }
+.project-github-link { color: var(--text-secondary); font-weight: bold; }
+.project-languages { margin-bottom: 1rem; font-size: 0.9rem; }
+.project-languages code { background-color: var(--bg-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 0.2rem 0.5rem; }
+.project-description { list-style-type: circle; padding-left: 20px; margin: 0; }
+
+/* Education list */
+#education h3 { font-size: 1.2rem; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 2rem; }
+.education-list { list-style: none; padding: 0; }
+.education-list li { display: flex; align-items: flex-start; margin-bottom: 1rem; }
+.education-list li i { margin-top: 0.25rem; margin-right: 1rem; color: var(--link-color); }
+.course-title { font-weight: bold; }
+.course-institution { font-style: italic; color: var(--text-secondary); }
+
+/* Achievement Box */
+.achievement-box { background-color: var(--bg-content); border-left: 4px solid var(--link-color); border-radius: 8px; padding: 1.2rem; margin: 1.5rem 0; }
+.achievement-title i { margin-right: 0.75rem; }
+.achievement-detail blockquote { margin: 0; padding-left: 1rem; border-left: 2px solid var(--border-color); font-style: italic; }
+
+/* --- Interactive Graph Section --- */
+.graph-intro-title {
+    text-align: center;
+    border-bottom: none; /* Override the default h2 border */
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.graph-intro-text {
+    text-align: center;
+    max-width: 600px; /* Keep the text from getting too wide */
+    margin: 0 auto 2rem; /* Center the block and add space below */
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+#interactive-graph-container {
+    padding: 0;
+    margin: 4rem auto 3rem; /* Add some margin */
+    max-width: 1000px; /* Wider than other sections */
+}
+
+#canvas-holder {
+    height: 400px;
+    background-color: var(--bg-content);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden; /* Ensures canvas stays within the rounded corners */
+    cursor: grab;
+}
+
+#canvas-holder:active {
+    cursor: grabbing;
+}
+
+/* --- Interactive Node Modal --- */
+#modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#node-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%); /* Start slightly above center for slide-in effect */
+    z-index: 2001;
+    background: var(--bg-content);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Visibility Class */
+#modal-overlay.is-visible,
+#node-modal.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+#node-modal.is-visible {
+    transform: translate(-50%, -50%); /* Move to true center */
+}
+
+#modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    line-height: 1;
+}
+#modal-title {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+#modal-details ul {
+    list-style: circle;
+    padding-left: 20px;
+}
+#modal-links a {
+    display: block;
+    background: var(--bg-main);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+}
+#modal-links a:hover {
+    border-color: var(--link-color);
+}
+
+/* ==========================================================================
+   SCROLL ANIMATIONS
+   ========================================================================== */
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, visibility 0.6s;
+    will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* ==========================================================================
+   CUSTOM CURSOR
+   ========================================================================== */
+
+body {
+    /* Hide the default cursor */
+    cursor: none;
+}
+
+#custom-cursor {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--link-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+transition: width 0.2s ease-out, height 0.2s ease-out, opacity 0.2s ease-out, background-color 0.2s ease-out, border 0.2s ease-out;
+    
+/* The "Glow" effect */
+    box-shadow: 0 0 15px var(--link-color), 0 0 30px var(--link-color);
+}
+
+/* Cursor effect when hovering over links or buttons */
+#custom-cursor.hover-active {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid var(--link-color);
+    box-shadow: none;
+    opacity: 0.6;
+}
+
+#custom-cursor.hidden {
+    opacity: 0;
+}
+
+/* Let the p5.js graph still show its 'grab' cursor */
+#canvas-holder {
+    cursor: grab !important;
+}
+#canvas-holder:active {
+    cursor: grabbing !important;
+}
+
+/* --- Cursor Disabling for Development --- */
+body.cursor-disabled {
+    /* Restore the default cursor when the feature is disabled in JS */
+    cursor: auto !important;
+}
+
+body.cursor-disabled #custom-cursor {
+    /* Ensure the custom cursor element is completely hidden */
+    display: none !important;
+}
+

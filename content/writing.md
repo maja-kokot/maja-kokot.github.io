@@ -4,10 +4,20 @@ title: "Writing"
 
 ### Undergraduate Project
 
-**[Title of Your Undergraduate Project]** [[Read More]](/path/to/project-details.pdf)
-<br>*A brief one or two-sentence description of the project, its goals, and the key technologies or methodologies you used. This is where you can summarize your work.*
+**[title to be decided]**
+<br>*Implementation of Ryan Williams' breakthrough result, 
+[Simulating Time with Square-Root Space](https://people.csail.mit.edu/rrw/time-vs-space.pdf),
+under supervision of Professor Tom Gur.*
+ <!-- [[Read More]](/path/to/project-details.pdf) -->
+
 
 ### Essays
 
-**An Essay on Quantum Error Correction** [[Read Essay]](/path/to/qec-essay.pdf)
-<br>*An essay submitted for the [Name of Prize] on the principles of quantum error correction, exploring concepts like Shor's code and surface codes.*
+**Quantum Error Correction** [[Read Essay]](/path/to/qec-essay.pdf)
+<br>*An essay submitted for the 
+Trinity Mathematical Essay Prizes 2025, exploring 
+CSS codes and stabilizer formalism.*
+
+If you don't think QEC codes are cool enough watch this:
+
+* [Brian Cox on quantum computing and black hole physics](https://www.youtube.com/watch?v=laGXRs9Ce70)

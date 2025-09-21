@@ -3,7 +3,7 @@ title: "Projects"
 ---
 
 <!-- Project 1: Copy this entire block for a new project -->
-<div class="project-box">
+<div id="project-chess" class="project-box">
   <div class="project-header">
     <h3 class="project-title">ChessPuzzy - AI-Driven Puzzle Platform</h3>
     <a class="project-github-link" href="https://github.com/a-rune/ChessPuzzy" target="_blank">
@@ -14,7 +14,7 @@ title: "Projects"
     <strong>Languages:</strong>
      <code>Python</code> <code>JavaScript</code>
   </div>
-  <strong>Technologies:</strong> <code>React</code> <code>Flask</code> <code>PostgreSQL</code> <code>Docker</code>
+  <strong>Technologies:</strong> <code>React</code> <code>Flask</code> <code>MySQL</code>
   <ul class="project-description">
   <li>Generator of artifical puzzle positions with difficulty evaluation and user rating updates</li>
     <li>Developed the core front-end interface using React, implementing the primary puzzle-solving logic and state management to ensure a responsive and interactive user experience.</li>
