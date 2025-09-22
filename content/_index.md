@@ -32,5 +32,5 @@ I'm a third-year Computer Science student at Trinity College Cambridge
 with a passion for Euclidean geometry and
  keen interest in quantum computing.
 
- Outside of academics, I am an  épée fencer and a member of the **Cambridge University Fencing Club**.
+ Outside of academics, I am an  épée fencer and a member of the *Cambridge University Fencing Club*.
 

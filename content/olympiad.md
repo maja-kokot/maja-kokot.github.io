@@ -8,10 +8,10 @@ title: "Olympiad"
 
 I wrote my own handout on Lemmas in Olympiad geometry:
 
-<strong><a href="/olympiad/book_2.pdf" onclick="gtag('event', 'pdf_download', {'pdf_url': this.href});" target="_blank">Book of Lemmas</a></strong>
+<!-- <strong><a href="/olympiad/book_2.pdf" onclick="gtag('event', 'pdf_download', {'pdf_url': this.href});" target="_blank">Book of Lemmas</a></strong> -->
 
 
-**[Book of Lemmas](/olympiad/book_2.pdf)** 
+**Book of Lemmas** [[comming soon]]() 
 <br>*A collection of important geometric configurations, advanced lemmas, and beautiful problems, complete with original diagrams created in Asymptote.*
 *  *Collection of important geometry configurations and beautiful problems*
 *   *Includes many great diagrams like the one to the rigth*
@@ -42,7 +42,8 @@ This is where I learned to break down complex problems with elegant structures.
 
 <div class="achievement-box">
   <div class="achievement-title">
-    <i class="fas fa-medal"></i> [European Girls' Mathematical Olympiad, Silver Medal (2022)](https://www.egmo.org/people/person2081/)
+    <i class="fas fa-medal"></i> 
+    <strong><a href="https://www.egmo.org/people/person2081/" onclick="gtag('event', 'pdf_download', {'pdf_url': this.href});" target="_blank">European Girls' Mathematical Olympiad, Silver Medal (2022)</a></strong>
   </div>
   <div class="achievement-detail">
   <blockquote>"I am particularly proud of solving Problem 6, the most difficult geometry problem,

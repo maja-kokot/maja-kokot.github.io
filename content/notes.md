@@ -4,11 +4,11 @@ title: "Lecture Notes"
 
 My lecture notes:
 
-### Topic
+<!-- ### Topic
 
 *   **[example](url)** 
 [[pdf]](/notes/general-relativity.pdf) 
-    <br>*example notes*
+    <br>*example notes* -->
 
 
 <!-- * {{< staticref "notes/general-relativity.pdf" "newtab" >}} example notes {{< /staticref >}} -->

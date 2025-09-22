@@ -19,10 +19,13 @@ const CLICK_THRESHOLD_TIME = 300; // Max milliseconds for it to be a click
 const nodeData = [
     { //0
         title: "Quantum Computing",
-        description: `I am fascinated by the intersection of physics and information. My focus is on:
+        description: `My primary academic interest at the intersection of physics and information. My focus includes:
 *   **Quantum Error Correction (QEC)**
 *   **Quantum Key Distribution (QKD)**
-*   **Complexity Theory (BQP)**`,
+*   **Complexity Theory (BQP)**
+
+I will be taking [Quantum Complexity Theory](https://www.cl.cam.ac.uk/teaching/2526/L330/) as a module in Part II of Computer Science Tripos.
+`,
         details: ["Error Correction Correction (QEC) ","Quantum Key Distribution (QKD)", "Complexity Theory (BQP)"],
         links: [
             // { text: "View QKD Simulation Project", url: "#projects" },
@@ -50,8 +53,8 @@ const nodeData = [
     },
     {  //3
         title: "Algorithms", 
-        description: `Deep understanding developed through competitive programming:
-*   Competitive Programming
+        description: `Deep understanding developed through *competitive programming*:
+*   Algorithm design
 *   Data Structures
 *   Complexity Analysis`,
         details: ["Competitive Programming", "Complexity Analysis", "Data Structures"], 
@@ -60,7 +63,7 @@ const nodeData = [
         ] },
     { //4
         title: "Software Engineering", 
-        description: `I enjoy designed software. My skills include:
+        description: `I enjoy designing software. My skills include:
 *   Full-Stack Development
 *   Version Control (Git)
 *   API Design (REST)`,
@@ -69,7 +72,7 @@ const nodeData = [
     { //5
         title: "Cybersecurity", 
         description: `I am interested in both classical and quantum information security. 
-        This includes **cryptographic protocols** and network security principles.`,
+        This includes *cryptographic protocols* and network security principles.`,
         details: ["Cryptography", "Classical & Quantum Protocols", , "Computer networking"], 
         links: [
             // { text: "View QKD Project", url: "#projects" }
@@ -77,19 +80,12 @@ const nodeData = [
     },
     { //6
         title: "Data Science",
-        description: `Experience with statistical techniques like **model fitting** and data analysis pipelines using Python libraries.`,
+        description: `Experience with statistical techniques like *model fitting* and data analysis pipelines using Python libraries.`,
         details: ["Model fitting" ], 
         links: [
             // { text: "View QKD Project", url: "#projects" }
         ] 
     },
-    // { //7
-    //     title: "Physics",
-    //     details: ["Quantum mechanics", "Particle physics" ], 
-    //     links: [
-    //         // { text: "View QKD Project", url: "#projects" }
-    //     ] 
-    // },
     { //7
         title: "Complexity theory",
         description: `A deep interest in the fundamental limits of computation. My undergraduate project involves implementing a key result in *time-space tradeoffs*.`,
@@ -99,6 +95,13 @@ const nodeData = [
             { text: "View my undergraduate project", url: "#writing" }
         ] 
     }
+        // { //7
+    //     title: "Physics",
+    //     details: ["Quantum mechanics", "Particle physics" ], 
+    //     links: [
+    //         // { text: "View QKD Project", url: "#projects" }
+    //     ] 
+    // },
 ];
 
 // Define connections between nodes by their index number from the list above.
@@ -109,7 +112,7 @@ const edgeData = [
     [2, 3], [2, 4], [2,6], // AI/ML links
     [3, 4], [3, 6], // Algorithms links
     [4,6], [4,5],
-    [7,3],
+    [7,3], [7,0],
 ];
 
 
