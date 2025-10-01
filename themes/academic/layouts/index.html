@@ -53,6 +53,36 @@
         <div id="canvas-holder"></div>
     </section>
 
+    <section id="timeline-preview" class="fade-in-section">
+        <!-- <h2>Timeline</h2> -->
+        
+        <!-- This new wrapper will hold the dashed line -->
+        <div class="timeline-snippet-wrapper">
+            
+            {{/* Loop through the 3 most recent events */}}
+            {{ range first 3 (where .Site.RegularPages "Section" "timeline").ByDate.Reverse }}
+            <div class="timeline-item" data-title="{{ .Title }}" data-date="{{ .Date.Format "January 2, 2006" }}">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h5 class="timeline-title">{{ .Title }}</h5>
+                </div>
+                <div class="timeline-description-hidden" style="display: none;">
+                    {{ .Content }}
+                </div>
+            </div>
+            {{ end }}
+
+            <!-- Treat the button as the final timeline item -->
+            <div class="timeline-item is-button-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-button-container">
+                    <a href="/timeline/" class="timeline-view-all-button">View Entire Timeline</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- The rest of the sections follow as before -->
     {{ with .Site.GetPage "/writing.md" }}
     <section id="writing" class="fade-in-section">
@@ -61,12 +91,35 @@
     </section>
     {{ end }}
 
-    {{ with .Site.GetPage "/notes.md" }}
     <section id="notes" class="fade-in-section">
-        <h2>{{ .Title }}</h2>
-        <div class="content-container">{{ .Content }}</div>
-    </section>
-    {{ end }}
+    <h2>Lecture Notes</h2>
+    <p>A collection of my academic and personal study notes. Each note is available for download as a high-quality PDF.</p>
+    
+    <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search definitions...">
+                    <div id="search-results"></div>
+                </div>
+    
+    <div class="notes-grid">
+        {{/* This finds all pages inside the "content/notes" folder */}}
+        {{ range .Site.Sections.ByTitle }}
+            {{ if eq .Section "notes" }}
+                {{ range .Pages.ByTitle }}
+                <div class="note-card">
+                    <h3>{{ .Title }}</h3>
+                    <p>{{ .Params.summary }}</p>
+                    <div class="note-card-links">
+                        <a href="{{ .Params.pdf_url }}" class="button-view-notes" target="_blank">
+                            <i class="fas fa-file-pdf"></i> View PDF
+                        </a>
+                    </div>
+                </div>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </div>
+</section>
 
     {{ with .Site.GetPage "/olympiad.md" }}
     <section id="olympiad" class="fade-in-section">

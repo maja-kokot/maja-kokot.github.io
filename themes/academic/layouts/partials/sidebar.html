@@ -1,0 +1,32 @@
+<div class="sidebar-content">
+    <div class="personal-info">
+        <a href="/#about"><img src="{{ .Site.Home.Params.avatar | relURL }}" alt="Avatar" class="avatar-image"></a>
+        <h1 class="sidebar-name">{{ .Site.Home.Params.name }}</h1>
+        <div class="personal-links">
+            {{ range .Site.Home.Params.contact_links }}
+            <a href="{{ .url }}">
+                <i class="{{ .icon }}"></i> {{ .name }}
+            </a>
+            {{ end }}
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <ul>
+            {{ range .Site.Params.links }}
+            <li><a href="{{ .url }}">{{ .name }}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+        <div class="social-links">
+            {{ range .Site.Home.Params.social }}
+            <a href="{{ .url }}" title="{{ .name }}" target="_blank">
+                <i class="fab fa-{{ lower .name }}"></i>
+            </a>
+            {{ end }}
+        </div>
+        <button id="theme-toggle" title="Toggle theme">◑</button>
+    </div>
+</div>

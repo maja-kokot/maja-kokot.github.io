@@ -1,0 +1,36 @@
+{{ define "main" }}
+<section id="timeline-full">
+    <h2>Timeline</h2>
+    <p>Overview of my academic, competitive, and personal journey - with cool things I did or participated in.</p>
+
+    <div class="timeline">
+        {{ range .Pages.GroupByDate "2006" "Desc" }}
+        <div class="timeline-year-group">
+            {{ range .Pages.GroupByDate "January" "Desc" }}
+            <div class="timeline-month-group">
+                
+                <!-- THE NEW MONTH/YEAR HEADER -->
+                <div class="month-year-header">
+                    <h3 class="month-name">{{ .Key }}</h3>
+                    <h4 class="year-name">{{ (index .Pages 0).Date.Format "2006" }}</h4>
+                </div>
+
+                {{ range .Pages }}
+                <div class="timeline-item" data-title="{{ .Title }}" data-date="{{ .Date.Format "January 2, 2006" }}">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <!-- THE DAY NUMBER HAS BEEN REMOVED FROM HERE -->
+                        <h5 class="timeline-title">{{ .Title }}</h5>
+                    </div>
+                    <div class="timeline-description-hidden" style="display: none;">
+                        {{ .Content }}
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

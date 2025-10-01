@@ -1,0 +1,12 @@
+[
+  {
+    "keyword": "Compiler",
+    "text": "A program that translates source code from a high-level language into a lower-level one.",
+    "url": "/notes/compiler-construction/"
+  },
+  {
+    "keyword": "Lexing",
+    "text": "The process of converting characters from the source code into a sequence of tokens.",
+    "url": "/notes/compiler-construction/"
+  }
+]

@@ -152,4 +152,22 @@ if (customCursorEnabled) {
     document.body.classList.add('cursor-disabled');
 }
 
+
+// --- TIMELINE MODAL LOGIC ---
+    document.body.addEventListener('click', function(event) {
+        const timelineItem = event.target.closest('.timeline-item');
+        if (timelineItem) {
+            const title = timelineItem.dataset.title;
+            const date = timelineItem.dataset.date;
+            const description = timelineItem.querySelector('.timeline-description-hidden').innerHTML;
+
+            // Reuse the existing modal function!
+            window.openNodeModal({
+                title: title,
+                description: `<p><em>${date}</em></p>${description}`, // We can add the date here
+                links: [] // No links needed for timeline items
+            });
+        }
+    });
+
 });
