@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <div className="min-h-screen pb-20 selection:bg-orange-100">
       
-      
       <nav className="fixed top-0 w-full z-50 bg-[#fdfdfc]/80 backdrop-blur-md border-b border-zinc-100/60">
         <div className="max-w-6xl mx-auto px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -72,13 +71,18 @@ export default function Home() {
     className="text-zinc-900 font-medium underline decoration-zinc-200 underline-offset-4 hover:decoration-black transition-all"
   >
      Trinity College
-  </a>, University of Cambridge.
+  </a>, University of Cambridge and a {" "}                 
+  <a 
+    href="https://www.cambridgetrust.org/" 
+    target="_blank" 
+    className="text-zinc-900 font-medium underline decoration-zinc-200 underline-offset-4 hover:decoration-black transition-all"
+  >Cambridge Trust</a>{" "} scholar.
   I'm a part of{" "}                 
   <a 
     href="https://www.cst.cam.ac.uk/people/tg508" 
     target="_blank" 
     className="text-zinc-900 font-medium underline decoration-zinc-200 underline-offset-4 hover:decoration-black transition-all"
-  >Professor Tom Gur</a>{" "}'s research group
+  >Professor Tom Gur</a>'s research group
   and
   I'm interested in quantum complexity theory and quantum error correction.
               </p>
